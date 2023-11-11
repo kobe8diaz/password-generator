@@ -66,10 +66,8 @@ function createList() {
     
 }
 
-// CSS - make UI pretty!
-// fix copy button icon size (make smaller)
+// COPY-ON-CLICK FUNCTIONS
 
-// copy on click function
 function copyPassword1() {
     navigator.clipboard.writeText(password1El.textContent)
 }
@@ -77,3 +75,6 @@ function copyPassword1() {
 function copyPassword2() {
     navigator.clipboard.writeText(password2El.textContent)
 }
+
+// CSS - make UI pretty!
+// fix copy button icon size (make smaller)

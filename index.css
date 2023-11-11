@@ -19,6 +19,10 @@ hr {
     font-weight: 800;
 }
 
+#emphasis {
+    color: #10B981;
+}
+
 #subtitle {
     font-weight: 400;
 }
@@ -30,9 +34,9 @@ hr {
     width: 215px;
 }
 
-#length-instructions {
+/* #length-instructions {
     
-}
+} */
 
 #li1 {
     margin-top: 0px;
@@ -85,6 +89,10 @@ input[type=checkbox] {
     width: 110px;
 }
 
+#numbers-checkbox:hover, #symbols-checkbox:hover {
+    cursor: pointer;
+}
+
 #button {
     border: none;
     background: #10B981;
@@ -120,7 +128,7 @@ input[type=checkbox] {
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
-    'wght' 400,
+    'wght' 300,
     'GRAD' 0,
     'opsz' 24;
     
@@ -129,5 +137,15 @@ input[type=checkbox] {
     color: white;
     padding: 10px 10px;
     border-radius: 10px;
-    /* height: 41.516px; */
+}
+
+.material-symbols-outlined:hover {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+
+    background: #2B3C53;
+    cursor: pointer;
 }
