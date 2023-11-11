@@ -74,6 +74,6 @@ function copyPassword1() {
     let p1El = document.getElementById("password-1")
     let hiddenField = document.getElementById("hidden-password-1")
     hiddenField.value = p1El.textContent
-    hiddenField.select()
+    // hiddenField.select()
     navigator.clipboard.writeText(hiddenField.value)
 }
