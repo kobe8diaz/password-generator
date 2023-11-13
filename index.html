@@ -12,39 +12,40 @@
         <div id="interface">
             <div id="header">
                 <h1 id="title">Generate a<br><span id="random-password-emphasis">random password</span></h1>
-                <h3 id="subtitle">Never use an insecure password again.</h3>
+                <h3 id="subtitle">Never use a vulnerable password again.</h3>
             </div>
             <hr>
-            <div id="length">
-                <div id="length-instructions">
-                    <p id="li1">Password length</p>
-                    <p id="li2">(12-20 characters)</p>
+            <div id="settings">
+                <div id="length-section">
+                    <div>
+                        <p id="length">Length</p>
+                        <p id="length-range">(12-20 characters)</p>
+                    </div>
+                    <input type="number" id="password-length" value="15" min="12" max="20" onKeyDown="return false">
                 </div>
-                <input type="number" id="password-length" value="15" min="12" max="20" onKeyDown="return false">
-            </div>
-            <div id="characters">
-                <p>Include...</p>
-                <div id="character-options">
-                    <div id="numbers-and-checkbox">
+                <div id="numbers-section">
+                    <div>
                         <p id="numbers">Numbers</p>
-                        <input type="checkbox" id="numbers-checkbox">
+                        <p id="numbers-examples">(0, 1, 2, 3, ...)</p>
                     </div>
-                    <div id="symbols-and-checkbox">
+                    <input type="checkbox" id="numbers-checkbox" checked>
+                </div>
+                <div id="symbols-section">
+                    <div>
                         <p id="symbols">Symbols</p>
-                        <input type="checkbox" id="symbols-checkbox">
+                        <p id="symbols-examples">(!, @, #, $, ...)</p>
                     </div>
+                    <input type="checkbox" id="symbols-checkbox" checked>
                 </div>
             </div>
             <hr>
-            <div>
-                <button id="button" onclick="generatePasswords()">Generate passwords</button>
-            </div>
-            <div id="passwords">
-                <div class="password-and-copy-button">
+            <div id="password-output-section">
+                <button id="generate-passwords-btn" onclick="generatePasswords()">Generate passwords</button>
+                <div class="password-and-copy-btn">
                     <h3 id="password-1"></h3>
                     <button class="material-symbols-outlined" style="font-size:21.5px;" onclick="copyPassword1()">content_copy</button>
                 </div>
-                <div class="password-and-copy-button">
+                <div class="password-and-copy-btn">
                     <h3 id="password-2"></h3>
                     <button class="material-symbols-outlined" style="font-size:21.5px;" onclick="copyPassword2()">content_copy</button>
                 </div>

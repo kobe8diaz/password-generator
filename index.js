@@ -7,7 +7,7 @@ const letters = [
 
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-const symbols = [
+const symbols = [
     "~","`","!","@","#","$","%","^","&","*",
     "(",")","_","-","+","=","{","[","}","]",
     ",","|",":",";","<",">",".","?","/"
@@ -69,12 +69,15 @@ function createList() {
 // COPY-ON-CLICK FUNCTIONS
 
 function copyPassword1() {
-    navigator.clipboard.writeText(password1El.textContent)
+    if (password1El.textContent) {
+        navigator.clipboard.writeText(password1El.textContent)
+        alert("Password copied: " + password1El.textContent)
+    }
 }
 
 function copyPassword2() {
-    navigator.clipboard.writeText(password2El.textContent)
+    if (password2El.textContent) {
+        navigator.clipboard.writeText(password2El.textContent)
+        alert("Password copied: " + password2El.textContent)
+    }
 }
-
-// CSS - make UI pretty!
-// fix copy button icon size (make smaller)
