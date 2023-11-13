@@ -70,14 +70,14 @@ function createList() {
 
 function copyPassword1() {
     // if (password1El.textContent) {
-    navigator.clipboard.writeText(password1El.textContent)
     alert("Password copied: " + password1El.textContent)
+    navigator.clipboard.writeText(password1El.textContent)
     // }
 }
 
 function copyPassword2() {
     // if (password2El.textContent) {
-    navigator.clipboard.writeText(password2El.textContent)
     alert("Password copied: " + password2El.textContent)
+    navigator.clipboard.writeText(password2El.textContent)
     // }
 }
