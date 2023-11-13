@@ -51,8 +51,8 @@ function createList() {
     
     let relevant_characters = letters
     
-    // console.log(document.getElementById("numbers").checked)
-    // console.log(document.getElementById("symbols").checked)
+    // console.log(document.getElementById("numbers-checkbox").checked)
+    // console.log(document.getElementById("symbols-checkbox").checked)
     
     if (document.getElementById("numbers-checkbox").checked) {
         relevant_characters = relevant_characters.concat(numbers)
@@ -70,14 +70,37 @@ function createList() {
 
 function copyPassword1() {
     if (password1El.textContent) {
-    // alert("Password copied: " + password1El.textContent)
         navigator.clipboard.writeText(password1El.textContent)
     }
 }
 
 function copyPassword2() {
     if (password2El.textContent) {
-    // alert("Password copied: " + password2El.textContent)
         navigator.clipboard.writeText(password2El.textContent)
     }
 }
+
+// ADDING FILL TO COPY BUTTONS WHEN CLICKED
+// Code below from ByteGrad on YouTube:
+
+// let copyBtnEl = document.querySelector(".material-symbols-outlined")
+// copyBtnEl.addEventListener("click", () => {
+//     copyBtnEl.classList.add("material-symbols-outlined-clicked")
+// })
+
+let generatePasswordsBtnEl = document.querySelector("#generate-passwords-btn")
+
+generatePasswordsBtnEl.addEventListener("click", function() {
+    document.querySelector(".material-symbols-outlined-clicked")?.classList.remove("material-symbols-outlined-clicked")
+})
+
+let copyBtnElList = document.querySelectorAll(".material-symbols-outlined")
+
+copyBtnElList.forEach(copyBtnEl => {
+    copyBtnEl.addEventListener("click", () => {
+        if (password1El.textContent && password2El.textContent) {
+            document.querySelector(".material-symbols-outlined-clicked")?.classList.remove("material-symbols-outlined-clicked")
+            copyBtnEl.classList.add("material-symbols-outlined-clicked")
+        }
+    })
+})
